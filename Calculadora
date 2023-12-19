@@ -1,0 +1,31 @@
+#Aqui está uma função em Python que implementa uma calculadora com três parâmetros,
+#onde os dois primeiros são os números a serem operados e o terceiro é um número inteiro que define a operação a ser executada:
+#python
+#Copy code
+
+def calculadora(num1, num2, operacao):
+    if operacao == 1:
+        resultado = num1 + num2
+        return f"A soma de {num1} e {num2} é: {resultado}"
+    elif operacao == 2:
+        resultado = num1 - num2
+        return f"A subtração de {num1} por {num2} é: {resultado}"
+    elif operacao == 3:
+        resultado = num1 * num2
+        return f"A multiplicação de {num1} por {num2} é: {resultado}"
+    elif operacao == 4:
+        if num2 != 0:  # Evita divisão por zero
+            resultado = num1 / num2
+            return f"A divisão de {num1} por {num2} é: {resultado}"
+        else:
+            return "Erro: Divisão por zero não é permitida."
+    else:
+        return "Erro: Operação inválida. Escolha um número de 1 a 4."
+
+# Exemplo de uso
+numero1 = float(input("Digite o primeiro número: "))
+numero2 = float(input("Digite o segundo número: "))
+operacao = int(input("Escolha a operação (1-Soma, 2-Subtração, 3-Multiplicação, 4-Divisão): "))
+
+resultado_operacao = calculadora(numero1, numero2, operacao)
+print(resultado_operacao)
